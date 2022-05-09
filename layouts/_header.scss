@@ -1,0 +1,13 @@
+.logo_header {
+  width: 100%;
+  font-family: "shrikhand", cursive;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.logo_header > img {
+  width: 20%;
+}
