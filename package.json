@@ -1,0 +1,23 @@
+{
+  "name": "dev-web_p3_ohmyfood",
+  "version": "1.0.0",
+  "description": "Installation package.json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./sass/scss/:./sass/css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gautier50/Dev-Web_P3_ohmyfood.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gautier50/Dev-Web_P3_ohmyfood/issues"
+  },
+  "homepage": "https://github.com/Gautier50/Dev-Web_P3_ohmyfood#readme",
+  "dependencies": {
+    "sass": "^1.51.0"
+  }
+}
