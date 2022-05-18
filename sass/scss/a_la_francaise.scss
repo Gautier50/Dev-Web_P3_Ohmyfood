@@ -10,14 +10,23 @@
   box-sizing: border-box;
 }
 .logo_header {
+  border: solid red;
   width: 100%;
   font-family: "shrikhand", cursive;
   text-decoration: none;
-  @include flexbox-center-column;
+  display: flex;
+  flex-direction: row;
+}
+a header {
+  display: flex;
+  flex-direction: row;
 }
 
 header {
-  @include flexbox-row;
+  @include flexbox-center-column;
+}
+.img_header {
+  width: 100%;
 }
 
 body {
