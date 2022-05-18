@@ -1,0 +1,57 @@
+@import "variables";
+@import "effects";
+@import "functions";
+@import "mixins";
+@import "buttons";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600&family=Roboto:wght@100;400;700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600&family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+.logo_header {
+  width: 100%;
+  font-family: "shrikhand", cursive;
+  text-decoration: none;
+  @include flexbox-center-column;
+}
+
+header {
+  @include flexbox-row;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+img {
+  border: solid 2px;
+  object-fit: cover;
+  height: 350px;
+  width: 100%;
+}
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo_footer {
+  font-family: "shrikhand", cursive;
+  padding-left: 40px;
+}
+footer {
+  background-color: black;
+  color: white;
+  padding: 10px;
+
+  img {
+    color: white;
+  }
+  li {
+    list-style-type: none;
+    line-height: 1.5rem;
+  }
+  @include width;
+}
+@media screen and (max-width: 768px) {
+}

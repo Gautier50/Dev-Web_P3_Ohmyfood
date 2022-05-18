@@ -1,0 +1,18 @@
+.logo_footer {
+  font-family: "shrikhand", cursive;
+  padding-left: 40px;
+}
+footer {
+  background-color: black;
+  color: white;
+  padding: 10px;
+
+  img {
+    color: white;
+  }
+  li {
+    list-style-type: none;
+    line-height: 1.5rem;
+  }
+  @include width;
+}
