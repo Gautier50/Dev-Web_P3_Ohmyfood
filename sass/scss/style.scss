@@ -14,9 +14,14 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
+
 a {
   text-decoration: none;
   color: #7e7e7e;
+}
+
+h1 {
+  margin-left: 40px;
 }
 
 i {
@@ -32,12 +37,15 @@ img {
   width: 20%;
 }
 .location {
+  i {
+    font-size: x-large;
+  }
   background-color: #eaeaea;
   box-shadow: 0 0 0.5rem rgb(0, 0, 25%);
   width: 100%;
   height: 80px;
   gap: 2%;
-  @include flexbox-row;
+  @include flexbox-row-center;
 }
 
 button {
@@ -58,7 +66,7 @@ button {
   background-color: #f6f6f6;
   width: 100%;
   height: 250px;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   @include flexbox-center-column;
 }
 .fonctionnement {
@@ -73,12 +81,15 @@ button {
   padding: 10px;
   background-color: $color-primary;
   color: white;
-  position: absolute; left: -20px;top:20px;
+  position: absolute;
+  left: -20px;
+  top: 20px;
   @include flexbox-center-column;
 }
 .steps {
   height: 350px;
   width: 100%;
+  margin-bottom: 70px;
   text-align: center;
   @include direction;
   @include flexbox-center-column;
@@ -119,15 +130,15 @@ button {
   background-color: #f6f6f6;
   width: 100%;
   height: auto;
+  padding: 30px 0 10px 0;
+  .restaurants_cards {
+    width: 100%;
+    height: auto;
+    padding-bottom: 60px;
+    @include flexbox-column-center-space-evenly;
+  }
 }
-.restaurants_cards {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: auto;
-  @include flexbox-center-column;
-  @include space;
-}
+
 img {
   object-fit: cover;
   border-radius: 25px 25px 0 0;
@@ -136,40 +147,43 @@ img {
 }
 .card {
   border-radius: 25px;
-  width: 80%;
+  width: 90%;
   height: 400px;
   margin: 20px;
   @include box-shadow;
+  .infos {
+    width: 100%;
+    height: 95px;
+    padding: 0 15px 0 15px;
+    @include flexbox-row-center-space-between;
+  }
+  i {
+    font-size: x-large;
+  }
 }
 .card:hover {
   cursor: pointer;
   transform: scale(1.05);
 }
 
-.infos {
-  width: 100%;
-  height: 95px;
-  padding-left: 15px;
-}
-.logo_footer {
-  font-family: "shrikhand", cursive;
-  padding-left: 40px;
-}
 footer {
-  background-color: black;
+  background-color: #353535;
   color: white;
   padding: 10px;
-
-  img {
-    color: white;
+  .logo_footer {
+    font-family: "shrikhand", cursive;
+    padding-left: 45px;
   }
+  i {
+    padding-left: -15px;
+  }
+  
   li {
+    border: solid yellow;
     list-style-type: none;
     line-height: 1.5rem;
   }
-  @include width;
 }
-
 @media screen and (max-width: 768px) {
 }
 /*# sourceMappingURL=style.css.map */

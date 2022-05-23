@@ -33,11 +33,6 @@ header {
   width: 100%;
 }
 
-h2 {
-  padding-left: 40px;
-  border: #99e2d0;;
-}
-
 img {
   object-fit: cover;
   height: 350px;
@@ -46,7 +41,6 @@ img {
 
 .menu {
   background-color: #f6f6f6;
-  border: solid blue;
   border-radius: 30px 30px 0 0;
   position: relative;
   bottom: 50px;
@@ -54,6 +48,14 @@ img {
     font-family: "shrikhand", cursive;
     padding-left: 40px;
   }
+
+  h2 {
+  font-weight: 300;
+  font-size: larger;
+  padding-left: 40px;
+  border-bottom: $color-tertiary;
+}
+
   ul {
     padding: 0;
     margin: auto;
@@ -95,7 +97,7 @@ img {
 }
 
 footer {
-  background-color: black;
+  background-color: #353535;
   color: white;
   padding: 10px;
   .logo_footer {
@@ -108,7 +110,6 @@ footer {
   }
   li {
     list-style-type: none;
-    
   }
 
   @include width;
