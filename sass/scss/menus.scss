@@ -31,13 +31,17 @@ header {
 
 img {
   object-fit: cover;
-  height: 350px;
+  height: 400px;
   width: 100%;
+}
+main {
+  background-color: #f6f6f6;
 }
 
 .menu {
+  height: auto;
   background-color: #f6f6f6;
-  border-radius: 30px 30px 0 0;
+  border-radius: 50px 50px 0 0;
   position: relative;
   bottom: 50px;
   h1 {
@@ -48,7 +52,8 @@ img {
   h2 {
     font-weight: 300;
     font-size: larger;
-    padding-left: 40px;
+    margin: 26px 0 0 0;
+    padding-left: 70px;
     bottom: 15px;
     right: 15px;
     position: relative;
@@ -56,7 +61,7 @@ img {
       content: "";
       position: absolute;
       top: 28px;
-      left: 40px;
+      left: 70px;
       height: 4px;
       width: 6%;
       background-color: $color-tertiary;
@@ -86,7 +91,7 @@ img {
 }
 
 #button {
-  margin-bottom: 60px;
+  padding-bottom: 45px;
   @include flexbox-row-center;
 }
 .card {

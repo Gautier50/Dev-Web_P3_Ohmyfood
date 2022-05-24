@@ -157,8 +157,11 @@ img {
     padding: 0 15px 0 15px;
     @include flexbox-row-center-space-between;
   }
-  i {
+  .heart {
     font-size: x-large;
+    .heart:hover {
+    background-color: $linear-gradient;
+    }
   }
 }
 .card:hover {
@@ -177,7 +180,7 @@ footer {
   i {
     padding-left: -15px;
   }
-  
+
   li {
     border: solid yellow;
     list-style-type: none;
