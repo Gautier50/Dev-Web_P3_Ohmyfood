@@ -36,20 +36,22 @@
   display: flex;
   align-items: center;
 }
-@mixin direction {
+@mixin direction-column {
   display: flex;
   flex-direction: column;
 }
-@mixin space {
+@mixin space-around {
   display: flex;
   justify-content: space-around;
 }
-@mixin width {
-  width: 100%;
+@mixin row-flexend {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 @mixin puces {
   list-style-type: none;
 }
 @mixin box-shadow {
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }

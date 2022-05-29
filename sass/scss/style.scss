@@ -91,9 +91,9 @@ button {
   width: 100%;
   margin-bottom: 70px;
   text-align: center;
-  @include direction;
+  @include direction-column;
   @include flexbox-center-column;
-  @include space;
+  @include space-around;
 }
 
 .choose_restaurants {
@@ -127,6 +127,12 @@ button {
 }
 
 .restaurants {
+  img {
+    object-fit: cover;
+    border-radius: 25px 25px 0 0;
+    width: 100%;
+    height: 300px;
+  }
   background-color: #f6f6f6;
   width: 100%;
   height: auto;
@@ -139,34 +145,61 @@ button {
   }
 }
 
-img {
-  object-fit: cover;
-  border-radius: 25px 25px 0 0;
-  width: 100%;
-  height: 300px;
-}
 .card {
+  position: relative;
   border-radius: 25px;
   width: 90%;
   height: 400px;
   margin: 20px;
   @include box-shadow;
+  .new {
+    position: relative;
+  }
+  .new::before {
+    content: "Nouveau";
+    position: absolute;
+    right: 1rem;
+    bottom: 22rem;
+    display: grid;
+    place-items: center;
+    height: 2rem;
+    width: 5rem;
+    background-color: $color-tertiary;
+    color: #3a8568;
+    font-weight: 500;
+  }
   .infos {
+    position: relative;
     width: 100%;
     height: 95px;
-    padding: 0 15px 0 15px;
+    padding: 0 15px;
+    line-height: 10px;
     @include flexbox-row-center-space-between;
-  }
-  .heart {
-    font-size: x-large;
-    .heart:hover {
-    background-color: $linear-gradient;
+    .heart {
+      font-size: xx-large;
+    }
+    .far {
+      position: absolute;
+      opacity: 1;
+    }
+    .fas {
+      color: transparent;
+      background-image: linear-gradient((#ff79da), (#9356dc));
+      background-clip: text;
+      -webkit-background-clip: text;
+      opacity: 0;
+      transition: all ease-in-out;
+    }
+    &:hover .fas {
+      opacity: 1;
     }
   }
 }
+
 .card:hover {
   cursor: pointer;
   transform: scale(1.05);
+  transition: all 500ms;
 }
 
 footer {
@@ -182,12 +215,10 @@ footer {
   }
 
   li {
-    border: solid yellow;
     list-style-type: none;
     line-height: 1.5rem;
   }
 }
-@media screen and (max-width: 768px) {
-}
+
 /*# sourceMappingURL=style.css.map */
 /*# sourceMappingURL=style.css.map */

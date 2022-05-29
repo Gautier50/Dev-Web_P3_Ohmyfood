@@ -44,11 +44,11 @@ main {
   border-radius: 50px 50px 0 0;
   position: relative;
   bottom: 50px;
+  
   h1 {
     font-family: "shrikhand", cursive;
     padding-left: 40px;
   }
-
   h2 {
     font-weight: 300;
     font-size: larger;
@@ -101,13 +101,26 @@ main {
   border: none;
   border-radius: 20px;
   background-color: white;
+  animation: appear 1s;
   @include box-shadow;
-  & .slide-left {
+  
+}
+.check {
+      border: solid red;
+      margin-left: auto;
+      width: 8%;
+      background-color: $color-tertiary;
+      color: white;
+      margin-right: 30px;
+      font-size: xx-large;
+      @include flexbox-row-center;
+      
+      & .slide-left {
     -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     color: $color-tertiary;
-  }
-}
+  }                        
+    }
 
 .desserts {
   margin-bottom: 60px;
