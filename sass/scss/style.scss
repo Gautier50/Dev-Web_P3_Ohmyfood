@@ -17,7 +17,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #7e7e7e;
+  color: black;
 }
 
 h1 {
@@ -48,7 +48,7 @@ img {
   @include flexbox-row-center;
 }
 
-button {
+#button {
   border-radius: 25px;
   border: none;
   background-image: linear-gradient((#ff79da), (#9356dc));
@@ -56,6 +56,10 @@ button {
   font-size: medium;
   height: 50px;
   width: 30%;
+}
+
+button:hover {
+  @include hover;
 }
 .explorer {
   color: white;
@@ -105,6 +109,9 @@ button {
   position: relative;
   @include box-shadow;
 }
+.choose_restaurants:hover {
+  @include hover;
+}
 
 .compose_your_menu {
   background-color: #f6f6f6;
@@ -115,6 +122,9 @@ button {
   position: relative;
   @include box-shadow;
 }
+.compose_your_menu:hover {
+  @include hover;
+}
 
 .taste_in_restaurant {
   background-color: #f6f6f6;
@@ -124,6 +134,9 @@ button {
   width: 60%;
   position: relative;
   @include box-shadow;
+}
+.taste_in_restaurant:hover {
+  @include hover;
 }
 
 .restaurants {
@@ -169,6 +182,7 @@ button {
     font-weight: 500;
   }
   .infos {
+    color: black;
     position: relative;
     width: 100%;
     height: 95px;
@@ -180,6 +194,7 @@ button {
     }
     .far {
       position: absolute;
+      scale: 0.8;
       opacity: 1;
     }
     .fas {
@@ -210,13 +225,20 @@ footer {
     font-family: "shrikhand", cursive;
     padding-left: 45px;
   }
-  i {
-    padding-left: -15px;
+  #devenir_partenaire {
+    padding-left: 2px;
+  }
+  span {
+    padding-left: 10px;
+  }
+  #last_lines_footer {
+    padding-left: 30px;
   }
 
   li {
     list-style-type: none;
     line-height: 1.5rem;
+    
   }
 }
 

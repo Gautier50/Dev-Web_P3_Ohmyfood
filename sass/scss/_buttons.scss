@@ -6,6 +6,9 @@ button {
   font-size: medium;
   height: 50px;
   width: 30%;
+  button:hover {
+    @include hover;
+  }
 }
 
 $linear-gradient: (#ff79da), (#9356dc);
