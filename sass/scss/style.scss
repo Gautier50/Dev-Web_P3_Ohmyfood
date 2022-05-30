@@ -183,22 +183,22 @@ button:hover {
   }
   .infos {
     color: black;
-    position: relative;
     width: 100%;
     height: 95px;
     padding: 0 15px;
     line-height: 10px;
     @include flexbox-row-center-space-between;
     .heart {
+       position: relative;
       font-size: xx-large;
     }
     .far {
       position: absolute;
-      scale: 0.8;
       opacity: 1;
     }
     .fas {
       color: transparent;
+      transform: scale(0.5);
       background-image: linear-gradient((#ff79da), (#9356dc));
       background-clip: text;
       -webkit-background-clip: text;
@@ -207,6 +207,7 @@ button:hover {
     }
     &:hover .fas {
       opacity: 1;
+      transform: scale(1.2);
     }
   }
 }

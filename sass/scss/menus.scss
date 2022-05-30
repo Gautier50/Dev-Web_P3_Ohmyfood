@@ -17,6 +17,7 @@ body {
 
 header {
   .logo_header a {
+    position: relative;
     width: 100%;
     font-family: "shrikhand", cursive;
     text-decoration: none;
@@ -27,6 +28,12 @@ header {
       left: 30px;
     }
   }
+}
+a:visited {
+  color: black;
+}
+#fleche_gauche {
+  color: black;
 }
 
 img {
@@ -63,7 +70,7 @@ main {
       top: 28px;
       left: 70px;
       height: 4px;
-      width: 6%;
+      width: 3rem;
       background-color: $color-tertiary;
     }
   }
@@ -78,15 +85,35 @@ main {
 }
 
 .name {
+  position: relative;
   margin-right: 80px;
   i {
-    font-size: x-large;
+    font-size: xx-large;
   }
   @include flexbox-row-center-space-between;
 }
+.heart {
+  position: relative;
+}
+.far {
+  position: absolute;
+  opacity: 1;
+}
+.fas {
+  color: transparent;
+  transform: scale(0.5);
+  background-image: linear-gradient((#ff79da), (#9356dc));
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all ease-in-out;
+}
+.fas:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
 
 .infos {
-  margin-right: 30px;
   @include flexbox-row-space-between;
 }
 
@@ -108,21 +135,19 @@ button:hover {
   animation: appear 1s;
   @include box-shadow;
 }
+.price {
+  border: solid blue;
+  margin-left: auto;
+  padding: 1rem;
+}
 .check {
+  height: auto;
+  margin-right: -3rem;
   border: solid red;
-  margin-left: autosd;
-  width: 8%;
+  width: auto;
   background-color: $color-tertiary;
   color: white;
-  margin-right: 30px;
   font-size: xx-large;
-  @include flexbox-row-center;
-
-  & .slide-left {
-    -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    color: $color-tertiary;
-  }
 }
 
 .desserts {
@@ -150,7 +175,6 @@ footer {
   li {
     list-style-type: none;
     line-height: 1.5rem;
-    
   }
 }
 

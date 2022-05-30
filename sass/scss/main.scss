@@ -1,9 +1,9 @@
-@import './variables';
-@import './functions';
-@import './mixins';
+@use "variables";
+@use "functions";
+@use "mixins";
 
-@import './header';
-@import './footer';
+@use './header';
+@use "footer";
 
-@import './buttons';
-@import './effects';
+@use "buttons";
+@use "effects";
