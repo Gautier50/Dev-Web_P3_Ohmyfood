@@ -18,16 +18,22 @@ body {
 header {
   .logo_header a {
     position: relative;
+    color: black;
     width: 100%;
     font-family: "shrikhand", cursive;
     text-decoration: none;
     @include flexbox-row-center;
-    i {
-      font-size: x-large;
-      position: absolute;
-      left: 30px;
-    }
   }
+  .icon::before {
+    border: solid blue;
+    position: absolute;
+    @include arrow-font-awesome;
+    content:"\f355";
+    width: 2rem;
+    height: 5rem;
+    color: black;
+  }
+
 }
 a:visited {
   color: black;
@@ -113,9 +119,7 @@ main {
   transform: scale(1.2);
 }
 
-.infos {
-  @include flexbox-row-space-between;
-}
+
 
 #button {
   padding-bottom: 45px;
@@ -126,28 +130,61 @@ button:hover {
 }
 
 .card {
+  
+  height: 130px;
   line-height: 0.1rem;
   margin: 10px;
-  padding: 10px;
   border: none;
   border-radius: 20px;
   background-color: white;
   animation: appear 1s;
   @include box-shadow;
+  display: flex;
+}
+.menu_card {
+  
+  width: 30%;
+  height: 100%;
+  border: solid violet;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.infos {
+  display: flex;
+  flex-direction: column;
+  border: solid orange;
+  height: 100%;
+  width: 100%;
+  padding: 16px;
 }
 .price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  width: 25%;
+  height: 100%;
   border: solid blue;
-  margin-left: auto;
-  padding: 1rem;
 }
 .check {
-  height: auto;
-  margin-right: -3rem;
+  
+ position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
   border: solid red;
-  width: auto;
+  border-radius: 0 20px 20px 0;
+  width: 25%;
   background-color: $color-tertiary;
   color: white;
   font-size: xx-large;
+}
+.check::before {
+  content: "";
+position: absolute;
+left: 300px;
 }
 
 .desserts {
