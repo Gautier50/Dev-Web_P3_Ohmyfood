@@ -1,3 +1,7 @@
+@mixin flexbox-column {
+  display: flex;
+  flex-direction: column;
+}
 @mixin flexbox-center-column {
   display: flex;
   flex-direction: column;
