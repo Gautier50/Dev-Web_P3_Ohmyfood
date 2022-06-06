@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://kit.fontawesome.com/7624aaf19f.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,6 +25,7 @@
                 <h1 id="logo_ohmyfood">ohmyfood</h1>
             </a>
         </div>
+
         <div class="img_header">
             <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
         </div>
@@ -47,10 +48,27 @@
                         <div class="card">
                             <div class="infos">
                                 <h3>Fricassée d'escargot</h3>
-                                <p>Au piment d'Espelette</p>
                                 <div class="menu_price">
+                                    <p>Au piment d'Espelette</p>
                                     <div class="price">
+                                        <div class="check">
+                                            <i class="fas fa-check-circle"></i>
+                                        </div>
                                         <p>25€</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="card">
+                            <div class="infos">
+                                <h3>Foie gras de canard mi-cuit</h3>
+                                <div class="menu_price">
+                                    <p>Et ses copeaux de truffe noire</p>
+                                    <div class="price">
+                                        <p>35€</p>
                                     </div>
                                 </div>
                                 <div class="check">
@@ -63,29 +81,16 @@
                     <li>
                         <div class="card">
                             <div class="infos">
-                                <h3>Foie gras de canard mi-cuit</h3>
-                                <p>Et ses copeaux de truffe noire</p>
-                            </div>
-                            <div class="price">
-                                <span>35€</span>
-                            </div>
-                            <div class="check">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="card">
-                            <div class="infos">
                                 <h3>Oeuf au plat</h3>
-                                <p>Assaisonné à la truffe sur lit de caviar</p>
-                            </div>
-                            <div class="price">
-                                <span>20€</span>
-                            </div>
-                            <div class="check">
-                                <i class="fas fa-check-circle"></i>
+                                <div class="menu_price">
+                                    <p>Assaisonné à la truffe sur lit de caviar</p>
+                                    <div class="price">
+                                        <p>20€</p>
+                                    </div>
+                                </div>
+                                <div class="check">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
                             </div>
                         </div>
                     </li>
@@ -185,9 +190,11 @@
                     </li>
                 </ul>
             </div>
-
-            <div id="button">
-                <button><span>Commander</span></button>
+            
+            <div class="main_button">
+                <button type="submit">
+                    <span>Commander</span>
+                </button>
             </div>
     </main>
 

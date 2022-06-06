@@ -16,26 +16,7 @@ body {
 }
 
 header {
-  .logo_header a {
-    color: black;
-    width: 100%;
-    font-family: "shrikhand", cursive;
-    text-decoration: none;
-    gap: 35%;
-    display: inline-block;
-    @include flexbox-center;
-  }
-}
-a:visited {
-  color: black;
-}
-.left_arrow {
-  margin-left: 34px;
-  width: 50px;
-  height: 50px;
-  color: black;
-  font-size: x-large;
-  @include flexbox-row-center;
+  @include header_menus;
 }
 
 img {
@@ -97,22 +78,35 @@ main {
   position: relative;
   @include heart-gradient;
 }
-
-#button {
-  padding-bottom: 45px;
-  @include flexbox-row-center;
+.main_button {
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  button {
+    span {
+      display: flex;
+      align-items: center;
+    }
+    padding-bottom: 45px;
+    @include button;
+    display: flex;
+    justify-content: center;
+    
+   
+  }
 }
 button:hover {
-  @include hover;
+  @include button-hover;
 }
 
 .card {
-  height: 100px;
-  width: 700px;
+  height: 90px;
+  width: 100%;
   position: relative;
   margin: 10px;
   border: none;
-  border-radius: 20px 0 0 20px;
+  border-radius: 20px;
   background-color: white;
   $animation-duration: 5s;
   animation-iteration-count: 3;
@@ -126,16 +120,16 @@ button:hover {
   flex-direction: column;
   line-height: 0px;
   border: solid orange;
-  width: 500px;
-  height: 100px;
+  width: 520px;
+  height: 90px;
   padding-left: 10px;
 }
 .menu_price {
   border: 2px solid violet;
-  margin-left: auto;
-  width: 100px;
+  width: 490px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  text-overflow: ellipsis;
 }
 .menu_price::before {
   content: "";
@@ -147,14 +141,12 @@ button:hover {
   height: 40px;
   width: 40px;
   border: solid blue;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flexbox-row-center;
 }
 
 .check {
-  width: 100px;
-  height: 100px;
+  width: 20%;
+  height: 90px;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -165,14 +157,17 @@ button:hover {
   font-size: xx-large;
   transition: all 0.5s;
   @include flexbox-row-center;
-  i {
-    color: white;
-  }
 }
+
 .card:hover {
   cursor: pointer;
   .check {
-    right: 30px;
+    right: 40px;
+    $animation-duration: 5s;
+    i {
+      transform: rotate(360deg);
+      transition: all 500ms ease-in-out 50ms;
+    }
   }
 }
 
@@ -183,6 +178,8 @@ button:hover {
 footer {
   @include footer;
 }
-
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 375px) and (max-width: 768px) {
+  img {
+    width: 100%;
+  }
 }

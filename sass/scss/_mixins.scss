@@ -58,10 +58,49 @@
 @mixin box-shadow {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
+@mixin button {
+  border-radius: 25px;
+  background-image: linear-gradient((#ff79da), (#9356dc));
+  color: white;
+  font-size: medium;
+  height: 50px;
+  width: 35%;
+  span {
+    color: white;
+    font-weight: 500;
+  }
+}
+@mixin button-hover {
+  filter: brightness(1.1);
+  box-shadow: rgb(50 50 93 / 25%) 0px 30px 60px -12px,
+    rgb(0 0 0 / 30%) 0px 18px 36px -18px;
+  @include hover;
+}
 @mixin hover {
   cursor: pointer;
   transform: scale(1.05);
   transition: all 500ms;
+}
+@mixin header_menus {
+  .logo_header a {
+    color: black;
+    width: 100%;
+    font-family: "shrikhand", cursive;
+    text-decoration: none;
+    gap: 30%;
+    display: inline-block;
+    @include flexbox-center;
+  }
+}
+a:visited {
+  color: black;
+}
+.left_arrow { 
+  width: 50px;
+  height: 50px;
+  color: black;
+  font-size: x-large;
+  @include flexbox-row-center;
 }
 @mixin footer {
   background-color: #353535;
@@ -69,17 +108,12 @@
   padding: 10px;
   .logo_footer {
     font-family: "shrikhand", cursive;
-    padding-left: 45px;
+    padding-left: 20px;
   }
-  #devenir_partenaire {
-    padding-left: 2px;
+  ul {
+    padding-left: 20px;
   }
-  span {
-    padding-left: 10px;
-  }
-  #last_lines_footer {
-    padding-left: 42px;
-  }
+  
   li {
     list-style-type: none;
     line-height: 1.5rem;

@@ -1,5 +1,4 @@
 button {
-  z-index: 1;
   border-radius: 25px;
   border: none;
   background-image: linear-gradient((#ff79da), (#9356dc));
@@ -8,8 +7,10 @@ button {
   height: 50px;
   width: 30%;
   button:hover {
-    z-index: 0;
     background-color: #ffffff;
+    filter: brightness(1.1);
+    box-shadow: rgb(50 50 93 / 25%) 0px 30px 60px -12px,
+      rgb(0 0 0 / 30%) 0px 18px 36px -18px;
     @include hover;
   }
 }
