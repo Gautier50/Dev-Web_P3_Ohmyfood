@@ -6,6 +6,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600&family=Roboto:wght@100;400;700&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600&family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
 
+/* Pour tout les écrans de type desktop */
+
+@media screen and (max-width: 769px) {
+  .logo_header a {
+    gap: 60%;
+    @include flexbox-center;
+  }
+  .menu {
+    h2 {
+      padding-left: 40px;
+    }
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -16,12 +30,15 @@ body {
 }
 
 header {
+  h1 {
+    font-size: x-large;
+  }
   @include header_menus;
 }
 
 img {
   object-fit: cover;
-  height: 400px;
+  height: 300px;
   width: 100%;
 }
 main {
@@ -37,13 +54,14 @@ main {
 
   h1 {
     font-family: "shrikhand", cursive;
-    padding-left: 60px;
+    padding-left: 30px;
+    font-size: x-large;
   }
   h2 {
     font-weight: 300;
     font-size: larger;
     margin: 26px 0 0 0;
-    padding-left: 69px;
+    padding-left: 40px;
     bottom: 15px;
     right: 11px;
     position: relative;
@@ -51,7 +69,7 @@ main {
       content: "";
       position: absolute;
       top: 28px;
-      left: 70px;
+      left: 40px;
       height: 4px;
       width: 3rem;
       background-color: $color-tertiary;
@@ -68,7 +86,7 @@ main {
 }
 
 .name {
-  margin-right: 80px;
+  margin-right: 30px;
   i {
     font-size: xx-large;
   }
@@ -92,8 +110,6 @@ main {
     @include button;
     display: flex;
     justify-content: center;
-    
-   
   }
 }
 button:hover {
@@ -101,6 +117,9 @@ button:hover {
 }
 
 .card {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   height: 90px;
   width: 100%;
   position: relative;
@@ -116,40 +135,57 @@ button:hover {
 }
 
 .infos {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   line-height: 0px;
   border: solid orange;
-  width: 520px;
+  width: 100%;
   height: 90px;
   padding-left: 10px;
+  h3, p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }
 .menu_price {
-  border: 2px solid violet;
-  width: 490px;
-  display: flex;
-  justify-content: space-between;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-right: 20px;
+  width: 100%;
+  height: 30px;
+  @include flexbox-row-center-space-between;
 }
 .menu_price::before {
   content: "";
   position: absolute;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   top: 20px;
 }
 .price {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   font-weight: bold;
-  height: 40px;
-  width: 40px;
-  border: solid blue;
+  height: 30px;
+  width: 30px;
   @include flexbox-row-center;
 }
 
 .check {
-  width: 20%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 90px;
   height: 90px;
   position: absolute;
   top: 0px;
-  right: 0px;
+  right: -90px;
   border: solid red;
   border-radius: 0 20px 20px 0;
   background-color: $color-tertiary;
@@ -160,15 +196,25 @@ button:hover {
 }
 
 .card:hover {
+  .infos {
+    width: calc(100% - 90px);
+  }
   cursor: pointer;
   .check {
-    right: 40px;
+    right: 0px;
     $animation-duration: 5s;
     i {
       transform: rotate(360deg);
       transition: all 500ms ease-in-out 50ms;
     }
   }
+}
+button {
+  margin: auto;
+  @include button;
+}
+button:hover {
+  @include button-hover;
 }
 
 .desserts {
@@ -177,9 +223,4 @@ button:hover {
 
 footer {
   @include footer;
-}
-@media screen and (min-width: 375px) and (max-width: 768px) {
-  img {
-    width: 100%;
-  }
 }

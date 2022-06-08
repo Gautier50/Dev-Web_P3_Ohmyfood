@@ -59,12 +59,13 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 @mixin button {
+  display: block;
   border-radius: 25px;
   background-image: linear-gradient((#ff79da), (#9356dc));
   color: white;
   font-size: medium;
   height: 50px;
-  width: 35%;
+  width: 58%;
   span {
     color: white;
     font-weight: 500;
@@ -87,7 +88,7 @@
     width: 100%;
     font-family: "shrikhand", cursive;
     text-decoration: none;
-    gap: 30%;
+    gap: 20%;
     display: inline-block;
     @include flexbox-center;
   }
@@ -95,11 +96,11 @@
 a:visited {
   color: black;
 }
-.left_arrow { 
+.left_arrow {
   width: 50px;
   height: 50px;
   color: black;
-  font-size: x-large;
+  font-size: large;
   @include flexbox-row-center;
 }
 @mixin footer {
@@ -113,7 +114,7 @@ a:visited {
   ul {
     padding-left: 20px;
   }
-  
+
   li {
     list-style-type: none;
     line-height: 1.5rem;
