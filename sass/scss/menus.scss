@@ -96,22 +96,11 @@ main {
   position: relative;
   @include heart-gradient;
 }
-.main_button {
-  padding: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
   button {
-    span {
-      display: flex;
-      align-items: center;
-    }
-    padding-bottom: 45px;
     @include button;
-    display: flex;
-    justify-content: center;
   }
-}
+
 button:hover {
   @include button-hover;
 }
@@ -121,7 +110,7 @@ button:hover {
   white-space: nowrap;
   overflow: hidden;
   height: 90px;
-  width: 100%;
+  max-width: 100%;
   position: relative;
   margin: 10px;
   border: none;
@@ -131,12 +120,9 @@ button:hover {
   animation-iteration-count: 3;
   animation: appear 3s;
   @include box-shadow;
-  display: flex;
 }
 
 .infos {
-  text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -145,17 +131,12 @@ button:hover {
   width: 100%;
   height: 90px;
   padding-left: 10px;
-  h3, p {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
 }
+
 .menu_price {
-  text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
   padding-right: 20px;
-  width: 100%;
+  max-width: 100%;
   height: 30px;
   @include flexbox-row-center-space-between;
 }
@@ -164,13 +145,9 @@ button:hover {
   position: absolute;
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
   top: 20px;
 }
 .price {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
   font-weight: bold;
   height: 30px;
   width: 30px;
@@ -178,15 +155,11 @@ button:hover {
 }
 
 .check {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
   width: 90px;
   height: 90px;
   position: absolute;
   top: 0px;
   right: -90px;
-  border: solid red;
   border-radius: 0 20px 20px 0;
   background-color: $color-tertiary;
   color: white;
@@ -201,7 +174,7 @@ button:hover {
   }
   cursor: pointer;
   .check {
-    right: 0px;
+    right: 0;
     $animation-duration: 5s;
     i {
       transform: rotate(360deg);

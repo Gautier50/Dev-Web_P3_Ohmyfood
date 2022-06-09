@@ -65,7 +65,7 @@
   color: white;
   font-size: medium;
   height: 50px;
-  width: 58%;
+  min-width: 55%;
   span {
     color: white;
     font-weight: 500;
@@ -128,8 +128,10 @@ a:visited {
   .far {
     position: absolute;
     opacity: 1;
+    font-size: xx-large;
   }
   .fas {
+    font-size: xx-large;
     color: transparent;
     transform: scale(0.5);
     background-image: linear-gradient((#ff79da), (#9356dc));
@@ -139,7 +141,7 @@ a:visited {
     transition: all ease-in-out;
     cursor: pointer;
   }
-  .fas:hover {
+  .fas:active {
     opacity: 1;
     transform: scale(1.2);
   }

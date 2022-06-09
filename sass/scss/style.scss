@@ -60,13 +60,6 @@ a {
 h1 {
   margin-left: 40px;
 }
-#logo_ohmyfood {
-  margin-left: 0;
-}
-
-i {
-  margin: 0 10px;
-}
 
 .logo_header {
   width: 100%;
@@ -76,6 +69,7 @@ i {
 
 .location {
   i {
+    margin: 0 10px;
     font-size: x-large;
   }
   background-color: #eaeaea;
@@ -103,7 +97,7 @@ button:hover {
   }
   background-color: #f6f6f6;
   width: 100%;
-  height: 270px;
+  height: 250px;
   margin-bottom: 60px;
   @include flexbox-center-column;
 }
@@ -232,25 +226,7 @@ button:hover {
     line-height: 10px;
     @include flexbox-row-center-space-between;
     .heart {
-      position: relative;
-      font-size: xx-large;
-    }
-    .far {
-      position: absolute;
-      opacity: 1;
-    }
-    .fas {
-      color: transparent;
-      transform: scale(0.5);
-      background-image: linear-gradient((#ff79da), (#9356dc));
-      background-clip: text;
-      -webkit-background-clip: text;
-      opacity: 0;
-      transition: all ease-in-out;
-    }
-    &:hover .fas {
-      opacity: 1;
-      transform: scale(1.2);
+      @include heart-gradient;
     }
   }
 }
