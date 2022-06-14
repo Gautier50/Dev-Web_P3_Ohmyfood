@@ -62,10 +62,8 @@
   display: block;
   border-radius: 25px;
   background-image: linear-gradient((#ff79da), (#9356dc));
-  color: white;
-  font-size: medium;
   height: 50px;
-  min-width: 55%;
+  width: 60%;
   span {
     color: white;
     font-weight: 500;
@@ -88,21 +86,24 @@
     width: 100%;
     font-family: "shrikhand", cursive;
     text-decoration: none;
-    gap: 20%;
-    display: inline-block;
-    @include flexbox-center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+    
+    .left_arrow {
+      width: 50px;
+      height: 100%;
+      color: black;
+      font-size: large;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      @include flexbox-row-center;
+    }
   }
 }
-a:visited {
-  color: black;
-}
-.left_arrow {
-  width: 50px;
-  height: 50px;
-  color: black;
-  font-size: large;
-  @include flexbox-row-center;
-}
+
 @mixin footer {
   background-color: #353535;
   color: white;
@@ -114,7 +115,6 @@ a:visited {
   ul {
     padding-left: 20px;
   }
-
   li {
     list-style-type: none;
     line-height: 1.5rem;
@@ -141,7 +141,7 @@ a:visited {
     transition: all ease-in-out;
     cursor: pointer;
   }
-  .fas:active {
+  .fas:hover {
     opacity: 1;
     transform: scale(1.2);
   }

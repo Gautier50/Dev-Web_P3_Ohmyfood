@@ -3,22 +3,9 @@
 @import "functions";
 @import "mixins";
 @import "buttons";
+@import "media";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600&family=Roboto:wght@100;400;700&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600&family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
-
-/* Pour tout les écrans de type desktop */
-
-@media screen and (max-width: 769px) {
-  .logo_header a {
-    gap: 60%;
-    @include flexbox-center;
-  }
-  .menu {
-    h2 {
-      padding-left: 40px;
-    }
-  }
-}
 
 * {
   box-sizing: border-box;
@@ -97,56 +84,60 @@ main {
   @include heart-gradient;
 }
 
-  button {
-    @include button;
-  }
+button {
+  @include button;
+}
 
 button:hover {
   @include button-hover;
 }
 
 .card {
-  text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
   height: 90px;
-  max-width: 100%;
+  width: 100%;
   position: relative;
   margin: 10px;
-  border: none;
   border-radius: 20px;
   background-color: white;
   $animation-duration: 5s;
   animation-iteration-count: 3;
   animation: appear 3s;
   @include box-shadow;
+  > h3 {
+   line-height: 0px;
+   height: 50px;
+   width: calc(100% - 50px);
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   overflow: hidden;
+  }
 }
 
 .infos {
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  border: solid 2px violet;
   line-height: 0px;
-  border: solid orange;
   width: 100%;
   height: 90px;
-  padding-left: 10px;
+  padding-left: 15px;
 }
 
 .menu_price {
-  overflow: hidden;
   padding-right: 20px;
   max-width: 100%;
   height: 30px;
-  @include flexbox-row-center-space-between;
+  display: flex;
+  > p {
+    margin: 0;
+    height: 30px;
+    line-height: 30px;
+    width: calc(100% - 30px);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
 }
-.menu_price::before {
-  content: "";
-  position: absolute;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  top: 20px;
-}
+
 .price {
   font-weight: bold;
   height: 30px;
@@ -191,7 +182,7 @@ button:hover {
 }
 
 .desserts {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 footer {

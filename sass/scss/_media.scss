@@ -1,17 +1,22 @@
+/* Pour tout les écrans de type mobile comprenant les smartphones et tablettes */
+
+@media screen and (max-width: 768px) {
+  
+}
 /* Pour tout les écrans de type desktop */
 
-@media screen and (max-width: 769px) {
-  .logo_header a {
-    gap: 60%;
+@media screen and (min-width: 769px) {
+  /*.logo_header a {
+    position: relative;
     @include flexbox-center;
-  }
+    h1 {
+      position: absolute;
+      left: 28rem;
+    }
+  }*/
   .menu {
     h2 {
       padding-left: 40px;
     }
   }
-}
-/* Pour tout les écrans de type mobile comprenant les smartphones et tablettes */
-
-@media screen and (min-width: 768px) {
 }
