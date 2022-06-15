@@ -101,7 +101,7 @@ button:hover {
   background-color: #f6f6f6;
   width: 100%;
   height: 250px;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   @include flexbox-center-column;
 }
 .fonctionnement {
@@ -124,7 +124,7 @@ button:hover {
 .steps {
   height: 350px;
   width: 100%;
-  margin-bottom: 70px;
+  margin-bottom: 60px;
   text-align: center;
   @include direction-column;
   @include flexbox-center-column;
@@ -193,7 +193,7 @@ button:hover {
   .restaurants_cards {
     width: 100%;
     height: auto;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
     @include flexbox-column-center-space-evenly;
   }
 }
