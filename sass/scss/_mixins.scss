@@ -112,12 +112,20 @@
     font-family: "shrikhand", cursive;
     padding-left: 20px;
   }
+  #proposer_un_restaurant {
+    span {
+      margin-left: 15px;
+    }
+  }
+  span {
+    margin-left: 10px;
+  }
   ul {
     padding-left: 20px;
   }
   li {
     list-style-type: none;
-    line-height: 1.5rem;
+    line-height: 2rem;
     a {
       text-decoration: none;
       color: white;
