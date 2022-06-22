@@ -138,8 +138,8 @@ button:hover {
   width: 85%;
   position: relative;
   @include box-shadow;
-  span {
-    margin-left: 1px;
+  span, a {
+    margin-left: 5px;
   }
 }
 .choose_restaurants:hover {
@@ -157,8 +157,8 @@ button:hover {
   width: 85%;
   position: relative;
   @include box-shadow;
-  span {
-    margin-left: 10px;
+  span, a{
+    margin-left: 5px;
   }
 }
 .compose_your_menu:hover {
@@ -176,8 +176,8 @@ button:hover {
   width: 85%;
   position: relative;
   @include box-shadow;
-  span {
-    margin-left: 10px;
+  span, a {
+    margin-left: 5px;
   }
 }
 .taste_in_restaurant:hover {
