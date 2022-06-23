@@ -115,7 +115,7 @@ button:hover {
   background-color: $color-primary;
   color: white;
   position: absolute;
-  left: -20px;
+  left: -33px;
   top: 20px;
   @include flexbox-center-column;
 }
@@ -136,9 +136,8 @@ button:hover {
   width: 85%;
   position: relative;
   @include box-shadow;
-  span,
-  a {
-    margin-left: 5px;
+  span {
+    margin-left: 15px;
   }
 }
 .choose_restaurants:hover {
@@ -156,9 +155,8 @@ button:hover {
   width: 85%;
   position: relative;
   @include box-shadow;
-  span,
-  a {
-    margin-left: 5px;
+  span {
+    margin-left: 15px;
   }
 }
 .compose_your_menu:hover {
@@ -176,9 +174,8 @@ button:hover {
   width: 85%;
   position: relative;
   @include box-shadow;
-  span,
-  a {
-    margin-left: 5px;
+  span {
+    margin-left: 15px;
   }
 }
 .taste_in_restaurant:hover {
