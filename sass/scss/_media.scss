@@ -1,0 +1,22 @@
+@media screen and (min-width: 769px) {
+.choose_restaurants {
+    width: 300px;
+}
+.restaurants_cards {
+    img {
+        width: 200px;
+    }
+    display: flex;
+    flex-direction: row;
+}
+.choice {
+    height: 260px;
+}
+.card {
+    width: 200px;
+    height: 200px;
+}
+h2 {
+    border: solid red;
+}
+}
