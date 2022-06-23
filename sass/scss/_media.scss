@@ -1,4 +1,9 @@
 @media screen and (min-width: 769px) {
+    .logo_header {
+        h1 {
+            font-size: xx-large;
+        }
+    }
   .menu {
     h1 {
       margin-left: 30px;
@@ -31,9 +36,28 @@
       width: 30%;
     }
   }
+
   .fonctionnement {
-    display: flex;
+    width: 100%;
+    height: 150px;
+    .steps {
+      width: 100%;
+      height: 150px;
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 50px;
+      .choose_restaurants {
+        width: 28%;
+      }
+      .compose_your_menu {
+        width: 28%;
+      }
+      .taste_in_restaurant {
+        width: 28%;
+      }
+    }
   }
+
   #restaurants_list {
     height: 700px;
     width: 100%;

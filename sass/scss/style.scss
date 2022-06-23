@@ -15,8 +15,8 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
   h1 {
-  margin: 30px;
-}
+    margin-left: 30px;
+  }
 }
 .loader {
   $animation-duration: 1ms;
@@ -63,7 +63,7 @@ a {
 
 .logo_header {
   h1 {
-    margin-left: 0;
+    font-size: xx-large;
   }
   width: 100%;
   font-family: "shrikhand", cursive;
@@ -136,7 +136,8 @@ button:hover {
   width: 85%;
   position: relative;
   @include box-shadow;
-  span, a {
+  span,
+  a {
     margin-left: 5px;
   }
 }
@@ -155,7 +156,8 @@ button:hover {
   width: 85%;
   position: relative;
   @include box-shadow;
-  span, a{
+  span,
+  a {
     margin-left: 5px;
   }
 }
@@ -174,7 +176,8 @@ button:hover {
   width: 85%;
   position: relative;
   @include box-shadow;
-  span, a {
+  span,
+  a {
     margin-left: 5px;
   }
 }
@@ -200,7 +203,7 @@ button:hover {
     width: 100%;
     padding-bottom: 30px;
   }
-  
+
   .card {
     position: relative;
     border-radius: 25px;
@@ -226,7 +229,7 @@ button:hover {
       color: #3a8568;
       font-weight: 500;
     }
-  
+
     .infos {
       color: black;
       width: 100%;
