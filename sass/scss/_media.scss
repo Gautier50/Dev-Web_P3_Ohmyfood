@@ -1,19 +1,52 @@
 @media screen and (min-width: 769px) {
-.choose_restaurants {
-    width: 300px;
-}
-.restaurants_cards {
-    img {
-        width: 200px;
+  .menu {
+    h1 {
+      margin-left: 30px;
     }
+    .heart {
+      margin-right: 30px;
+    }
+  }
+  .menu_entier {
+    width: 100%;
+    height: 400px;
+    @include space-around;
+
+    .card {
+      width: 100%;
+      margin: auto;
+      margin-bottom: 20px;
+      margin-top: 15px;
+    }
+    .entrees {
+      height: 400px;
+      width: 30%;
+    }
+    .plats {
+      height: 400px;
+      width: 30%;
+    }
+    .desserts {
+      height: 400px;
+      width: 30%;
+    }
+  }
+  .fonctionnement {
+    display: flex;
+  }
+  #restaurants_list {
+    height: 700px;
+    width: 100%;
     display: flex;
     flex-direction: row;
-}
-.choice {
-    height: 260px;
-}
-.card {
-    width: 200px;
-    height: 200px;
-}
+    flex-wrap: wrap;
+    .card {
+      height: 300px;
+      width: 45%;
+      margin: auto;
+      .infos {
+        line-height: 20px;
+      }
+    }
+  }
 }

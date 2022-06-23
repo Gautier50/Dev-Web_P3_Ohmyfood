@@ -37,25 +37,56 @@ button button:hover {
 }
 
 @media screen and (min-width: 769px) {
-  .choose_restaurants {
-    width: 300px;
+  .menu h1 {
+    margin-left: 30px;
+  }
+  .menu .heart {
+    margin-right: 30px;
   }
 
-  .restaurants_cards {
+  .menu_entier {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .menu_entier .card {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 15px;
+  }
+  .menu_entier .entrees {
+    height: 400px;
+    width: 30%;
+  }
+  .menu_entier .plats {
+    height: 400px;
+    width: 30%;
+  }
+  .menu_entier .desserts {
+    height: 400px;
+    width: 30%;
+  }
+
+  .fonctionnement {
+    display: flex;
+  }
+
+  #restaurants_list {
+    height: 700px;
+    width: 100%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
-  .restaurants_cards img {
-    width: 200px;
+  #restaurants_list .card {
+    height: 300px;
+    width: 45%;
+    margin: auto;
   }
-
-  .choice {
-    height: 260px;
-  }
-
-  .card {
-    width: 200px;
-    height: 200px;
+  #restaurants_list .card .infos {
+    line-height: 20px;
   }
 }
 * {
@@ -67,7 +98,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 body h1 {
-  margin-left: 30px;
+  margin: 30px;
 }
 
 .loader {
@@ -161,7 +192,7 @@ button:hover {
 .choice {
   background-color: #f6f6f6;
   width: 100%;
-  height: 280px;
+  height: 260px;
   margin-bottom: 50px;
   display: flex;
   flex-direction: column;
@@ -173,10 +204,6 @@ button:hover {
 .choice p {
   margin-top: 0px;
   text-align: center;
-}
-
-.fonctionnement {
-  width: 100%;
 }
 
 .number {
@@ -278,7 +305,6 @@ button:hover {
 .restaurants {
   background-color: #f6f6f6;
   width: 100%;
-  height: auto;
   padding: 30px 0 10px 0;
 }
 .restaurants img {
@@ -289,26 +315,22 @@ button:hover {
 }
 .restaurants .restaurants_cards {
   width: 100%;
-  height: auto;
   padding-bottom: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
 }
-
-.card {
+.restaurants .card {
   position: relative;
   border-radius: 25px;
   width: 90%;
   height: 300px;
   margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
-.card .new {
+.restaurants .card .new {
   position: relative;
 }
-.card .new::before {
+.restaurants .card .new::before {
   content: "Nouveau";
   position: absolute;
   right: 1rem;
@@ -321,7 +343,7 @@ button:hover {
   color: #3a8568;
   font-weight: 500;
 }
-.card .infos {
+.restaurants .card .infos {
   color: black;
   width: 100%;
   height: 95px;
@@ -332,12 +354,12 @@ button:hover {
   align-items: center;
   justify-content: space-between;
 }
-.card .infos .heart .far {
+.restaurants .card .infos .heart .far {
   position: absolute;
   opacity: 1;
   font-size: xx-large;
 }
-.card .infos .heart .fas {
+.restaurants .card .infos .heart .fas {
   font-size: xx-large;
   color: transparent;
   transform: scale(0.5);
@@ -348,7 +370,7 @@ button:hover {
   transition: all ease-in-out;
   cursor: pointer;
 }
-.card .infos .heart .fas:hover {
+.restaurants .card .infos .heart .fas:hover {
   opacity: 1;
   transform: scale(1.2);
 }
