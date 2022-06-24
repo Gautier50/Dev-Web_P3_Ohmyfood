@@ -131,7 +131,7 @@ body h1 {
   inset: 0;
   z-index: 1;
   opacity: 0.9;
-  animation: disappear 200ms 2ms forwards;
+  animation: disappear 200ms 4s forwards;
   transform-origin: top;
 }
 .loader::after {
@@ -144,7 +144,7 @@ body h1 {
   border-right: 5px dashed #99e2d0;
   border-left: 5px dashed #99e2d0;
   border-radius: 50%;
-  animation: spin 1ms infinite ease-in-out;
+  animation: spin 2s infinite ease-in-out;
   animation-iteration-count: 2;
 }
 
